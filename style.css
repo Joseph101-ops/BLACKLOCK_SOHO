@@ -533,12 +533,27 @@ footer {
     text-align: center;
   }
 
- .logo-img{
-  height: 40px;
-  width: auto;
-  }
+ .logo{
+display:flex;
+align-items:center;
+}
+
+.logo img{
+height:70px;
+width:auto;
+display:block;
+object-fit:contain;
+}
  
  .hero-video,
  .hero-content {
   transition: transform 0.1s linear;
+}
+
+@media(max-width:768px){
+
+.logo img{
+height:42px;
+}
+
 }
