@@ -1,0 +1,544 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #111111;
+  color: #F8F5EE;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* =====================
+   HERO
+===================== */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.45) contrast(1.08) saturate(.95);
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.78)),
+    radial-gradient(circle at center, transparent, rgba(0,0,0,.35));
+}
+
+.smoke {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  top: -10%;
+  left: -10%;
+  opacity: .08;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  animation: smokeMove 18s linear infinite;
+}
+
+@keyframes smokeMove {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-2%,-3%) scale(1.04); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+/* NAV */
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 36px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #F8F5EE;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.eyebrow {
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+  opacity: .8;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(64px, 10vw, 140px);
+  line-height: .88;
+  font-weight: 900;
+}
+
+.sub {
+  margin-top: 34px;
+  font-size: 22px;
+  line-height: 1.8;
+  opacity: .92;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 50px;
+}
+
+.hero-buttons button {
+  padding: 20px 42px;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 999px;
+  transition: .45s;
+}
+
+.hero-buttons button:first-child {
+  background: #C69B5E;
+  color: #111;
+  box-shadow: 0 0 60px rgba(198,155,94,.28);
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid rgba(248,245,238,.4);
+  color: #F8F5EE;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* SCROLL */
+
+.scroll {
+  margin-top: 60px;
+  font-size: 26px;
+  opacity: .7;
+  animation: float 2s infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(8px); }
+}
+
+/* =====================
+   PROOF
+===================== */
+
+.proof {
+  padding: 160px 8%;
+  background: linear-gradient(180deg, #111, #171717);
+}
+
+.proof-top {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.metric {
+  min-width: 220px;
+}
+
+.metric span {
+  display: block;
+  font-size: 72px;
+  font-family: "Playfair Display", serif;
+  color: #C69B5E;
+}
+
+.metric p {
+  margin-top: 12px;
+  opacity: .75;
+  letter-spacing: 2px;
+}
+
+.review-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  margin-top: 90px;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.review-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review {
+  min-width: 420px;
+  padding: 50px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: blur(30px);
+  border-radius: 32px;
+  font-size: 22px;
+  line-height: 1.7;
+  transition: .5s;
+}
+
+.review:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 80px rgba(198,155,94,.15);
+}
+
+/* =====================
+   SIGNATURES
+===================== */
+
+.signatures {
+  padding: 180px 8%;
+  background: #121212;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.section-title p {
+  color: #C69B5E;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(50px, 7vw, 100px);
+  line-height: .95;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.food-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 34px;
+  cursor: pointer;
+  background: #191919;
+  transition: .8s;
+}
+
+.food-card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1.4s;
+  filter: brightness(.7);
+}
+
+.food-info {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  z-index: 4;
+}
+
+.food-info span {
+  font-size: 34px;
+}
+
+.food-info h3 {
+  margin-top: 12px;
+  font-size: 38px;
+  font-family: "Playfair Display", serif;
+}
+
+.food-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,.75));
+}
+
+.food-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 0 120px rgba(198,155,94,.18);
+}
+
+.food-card:hover img {
+  transform: scale(1.12);
+  filter: brightness(.9);
+}
+
+/* =====================
+   EXPERIENCE
+===================== */
+
+.experience {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  min-height: 100vh;
+  background: #111;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.82);
+  transform: scale(1.08);
+}
+
+.experience-content {
+  padding: 140px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  color: #C69B5E;
+  letter-spacing: 5px;
+  margin-bottom: 26px;
+}
+
+.experience h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: .92;
+}
+
+.experience-text {
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 2;
+  max-width: 600px;
+  opacity: .92;
+}
+
+/* =====================
+   MENU
+===================== */
+
+.menu-preview {
+  padding: 180px 8%;
+  background: linear-gradient(180deg, #141414, #101010);
+}
+
+.menu-heading {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.menu-heading p {
+  color: #C69B5E;
+  letter-spacing: 5px;
+  margin-bottom: 24px;
+}
+
+.menu-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(58px, 8vw, 120px);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.menu-card {
+  padding: 60px;
+  border-radius: 36px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+}
+
+.menu-card span {
+  color: #C69B5E;
+  letter-spacing: 3px;
+  margin-bottom: 36px;
+  display: block;
+}
+
+.menu-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.menu-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 0 90px rgba(198,155,94,.14);
+}
+
+/* =====================
+   RESERVE
+===================== */
+
+.reserve {
+  padding: 200px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.reserve-panel {
+  width: min(820px, 100%);
+  padding: 70px;
+  border-radius: 40px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(32px);
+}
+
+.reserve-label {
+  color: #C69B5E;
+  letter-spacing: 5px;
+  margin-bottom: 24px;
+}
+
+#reservationForm {
+  display: grid;
+  gap: 20px;
+}
+
+#reservationForm input {
+  padding: 24px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  color: #F8F5EE;
+  border-radius: 18px;
+}
+
+#reservationForm button {
+  padding: 24px;
+  background: #C69B5E;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* =====================
+   LOCATION + FOOTER
+===================== */
+
+.location {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.location-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.82));
+}
+
+footer {
+  padding: 90px 8%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* =====================
+   MOBILE FIXES ONLY
+===================== */
+
+@media (max-width: 768px) {
+
+  nav { padding: 26px; }
+
+  .nav-links { display: none; }
+
+  .hero-buttons { flex-direction: column; }
+
+  .experience {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-content {
+    padding: 80px 32px;
+  }
+
+  .food-card {
+    height: 400px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+ .logo-img{
+  height: 40px;
+  width: auto;
+  }
+ 
+ .hero-video,
+ .hero-content {
+  transition: transform 0.1s linear;
+}
