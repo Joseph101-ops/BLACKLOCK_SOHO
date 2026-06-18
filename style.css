@@ -96,7 +96,7 @@ z-index:20;
 
 .logo img{
 
-height:99px;
+height:109px;
 
 width:auto;
 
@@ -665,11 +665,11 @@ pointer-events:none;
 
 z-index:9999;
 
-opacity:.1333;
+opacity:.33;
 
 background:url="grain.png";
 
-background-size:180px;
+background-size:80px;
 
 background-repeat:repeat;
 
