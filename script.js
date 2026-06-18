@@ -69,17 +69,6 @@ window.addEventListener("mousemove", (e) => {
   smoke.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-// CALL BUTTON
-function callNow(){
-window.location.href = "tel:+442034416996";
-}
-
-// GOOGLE MAPS
-function openMap(){
-window.open(
-"https://www.google.com/maps/search/?api=1&query=24+Great+Windmill+St+London+W1D+7LG",
-"_blank"
-);
 
 /* COUNTERS */
 document.querySelectorAll("[data-target]").forEach((counter) => {
