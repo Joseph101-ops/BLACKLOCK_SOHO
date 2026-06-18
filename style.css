@@ -96,11 +96,11 @@ z-index:20;
 
 .logo img{
 
-height:72px;
+height:99px;
 
 width:auto;
 
-display:block;
+display:flex;
 
 object-fit:contain;
 
@@ -665,11 +665,11 @@ pointer-events:none;
 
 z-index:9999;
 
-opacity:.33;
+opacity:.1333;
 
 background:url="grain.png";
 
-background-size:80px;
+background-size:180px;
 
 background-repeat:repeat;
 
